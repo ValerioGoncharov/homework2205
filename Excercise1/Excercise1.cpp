@@ -5,10 +5,11 @@
 #error "You need to define MODE"
 #endif
 
-int add(int a, int b)
-{
+#if (MODE == 1)
+int add(int a, int b) {
 	return a + b;
 }
+#endif
 
 int main()
 {
@@ -17,6 +18,7 @@ int main()
 	std::cout << "Работаю в режиме тренировки" << std::endl;
 
 #elif (MODE == 1)
+
 	int a, b;
 	std::cout << "Работаю в боевом режиме" << std::endl;
 	std::cout << "Введите число 1: " << std::endl;
